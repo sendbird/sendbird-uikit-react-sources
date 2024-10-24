@@ -47,7 +47,7 @@ export const Message = (props: MessageProps): React.ReactElement => {
     const hasUnsentMessage = isSendableMessage(lastMessageInView) && lastMessageInView.sendingStatus !== 'succeeded';
     const showSuggestedReplies = showSuggestedRepliesFor === 'all_messages'
       ? true
-      : message.messageId === lastMessageInView.messageId;
+      : message.messageId === lastMessageInView.messageId; // for last_message_only
     return enableSuggestedReplies && getSuggestedReplies(message).length > 0 && !hasUnsentMessage && showSuggestedReplies;
   });
 
