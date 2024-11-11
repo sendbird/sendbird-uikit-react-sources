@@ -178,7 +178,7 @@ export function initSDK({
     appId,
     modules: [new GroupChannelModule()],
     newInstance: isNewApp,
-    localCacheEnabled: true,
+    localCacheEnabled: sdkInitParams.localCacheEnabled ?? true,
   });
 
   if (customApiHost) params.customApiHost = customApiHost;
