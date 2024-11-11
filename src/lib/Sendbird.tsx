@@ -262,24 +262,19 @@ const SendbirdSDK = ({
   // add-remove theme from body
   useEffect(() => {
     logger.info('Setup theme', `Theme: ${currentTheme}`);
-    try {
-      const body = document.querySelector('body');
-      body?.classList.remove('sendbird-theme--light');
-      body?.classList.remove('sendbird-theme--dark');
-      body?.classList.add(`sendbird-theme--${currentTheme || 'light'}`);
-      logger.info('Finish setup theme');
-      // eslint-disable-next-line no-empty
-    } catch (e) {
-      logger.warning('Setup theme failed', `${e}`);
+    const themeClass = `sendbird-theme--${currentTheme}`;
+
+    const body = document.querySelector('body');
+    if (body) {
+      if (!body.classList.contains(themeClass)) {
+        body.classList.remove('sendbird-theme--light', 'sendbird-theme--dark');
+        body.classList.add(themeClass);
+
+        return () => {
+          body.classList.remove(themeClass);
+        };
+      }
     }
-    return () => {
-      try {
-        const body = document.querySelector('body');
-        body?.classList.remove('sendbird-theme--light');
-        body?.classList.remove('sendbird-theme--dark');
-        // eslint-disable-next-line no-empty
-      } catch {}
-    };
   }, [currentTheme]);
 
   const isOnline = useOnlineStatus(sdkStore.sdk, logger);
