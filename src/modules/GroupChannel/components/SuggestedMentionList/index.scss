@@ -11,8 +11,8 @@
   width: calc(100% - 56px);
   max-height: 260px;
   overflow: scroll;
-  margin-left: 28px;
-  margin-right: 28px;
+  margin-inline-start: 28px;
+  margin-inline-end: 28px;
   @include themed() {
     border: 1px solid t(bg-1);
   }
@@ -38,7 +38,7 @@
     .sendbird-mention-suggest-list__user-item__nickname {
       position: relative;
       display: inline-block;
-      margin-left: 16px;
+      margin-inline-start: 16px;
       max-width: calc(100% - 250px);
       white-space: nowrap;
       overflow: hidden;
@@ -50,7 +50,7 @@
     .sendbird-mention-suggest-list__user-item__user-id {
       position: absolute;
       display: inline-block;
-      right: 16px;
+      inset-inline-end: 16px;
       max-width: 180px;
       white-space: nowrap;
       overflow: hidden;
