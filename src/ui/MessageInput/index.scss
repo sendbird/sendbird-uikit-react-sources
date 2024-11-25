@@ -53,7 +53,7 @@
     position: absolute;
     pointer-events: none;
     top: 18px;
-    left: 16px;
+    inset-inline-start: 16px;
     font-family: var(--sendbird-font-family-default);
     font-size: 14px;
     line-height: 1.43;
