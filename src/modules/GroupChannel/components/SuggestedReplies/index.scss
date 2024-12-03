@@ -56,8 +56,8 @@
   cursor: pointer;
   word-break: break-word;
   @include themed() {
-    color: t(primary--3-2);
-    border: 1px solid t(primary--3-2);
+    color: t(on-content-reverse-1);
+    border: 1px solid t(on-content-reverse-1);
     background-color: t(bg-0);
   }
   &:hover {
@@ -67,8 +67,8 @@
   }
   &:active {
     @include themed() {
-      background-color: t(primary--3-2);
-      color: t(bg-0);
+      color: t(on-content-1);
+      background-color: t(bg-6);
     }
   }
   &.horizontal {
