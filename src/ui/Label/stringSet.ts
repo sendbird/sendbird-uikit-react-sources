@@ -7,7 +7,7 @@
  */
 
 // TODO: Make StringSet as a interface
-export type StringSet = Record<keyof typeof stringSet['en'], string>;
+export type StringSet = Record<keyof (typeof stringSet)['en'], string>;
 const stringSet = {
   en: {
     // Group Channel - Conversation
@@ -214,7 +214,7 @@ const stringSet = {
     CHANNEL_PREVIEW_LAST_MESSAGE_FILE_TYPE_GENERAL: 'File',
     CHANNEL_PREVIEW_LAST_MESSAGE_TEMPLATE_MESSAGE: 'Message',
     // Date format
-    DATE_FORMAT__MESSAGE_LIST__NOTIFICATION__UNREAD_SINCE: 'p \'on\' MMM dd',
+    DATE_FORMAT__MESSAGE_LIST__NOTIFICATION__UNREAD_SINCE: "p 'on' MMM dd",
     DATE_FORMAT__MESSAGE_LIST__DATE_SEPARATOR: 'MMMM dd, yyyy',
     DATE_FORMAT__THREAD_LIST__DATE_SEPARATOR: 'MMM dd, yyyy',
     DATE_FORMAT__MESSAGE_TIMESTAMP: 'p',
@@ -238,6 +238,26 @@ const stringSet = {
     // Form submit failed error messages
     FORM_ITEM_REQUIRED: 'This field is required',
     FORM_ITEM_INVALID: 'Please check the value',
+
+    // CAST
+    CSAT_START_NEW_CONVERSATION: '💬 Start a new conversation',
+    CSAT_CLOSE_NOTIFIER_TITLE: '🙋 Is there anything else I can assist you with?',
+    CSAT_CLOSE_NOTIFIER_SUBTITLE: 'If not, this conversation will automatically close in 10 seconds',
+    CSAT_CLOSE_NOTIFIER_YES: 'Yes',
+    CSAT_CLOSE_NOTIFIER_NO: 'No',
+    CSAT_RATING_COMMENT: 'Could you share why you gave this score?',
+    CSAT_RATING_PLACEHOLDER: 'Leave a comment',
+    CSAT_RATING_BTN_RESELECT: 'Reselect',
+    CSAT_RATING_BTN_SUBMIT: 'Submit',
+    CSAT_RATING_TITLE: 'How was your chat experience?',
+    CSAT_RATING_SUBTITLE: 'Your quick score helps us improve',
+    CSAT_RATING_SCORE_1: 'Terrible',
+    CSAT_RATING_SCORE_2: 'Bad',
+    CSAT_RATING_SCORE_3: 'Okay',
+    CSAT_RATING_SCORE_4: 'Good',
+    CSAT_RATING_SCORE_5: 'Great',
+    CSAT_CONFIRMATION_TITLE: '✔️ Successfully submitted.',
+    CSAT_CONFIRMATION_SUBTITLE: 'Thanks for sharing your experience with us!',
   },
 };
 
