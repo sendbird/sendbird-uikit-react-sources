@@ -241,10 +241,10 @@ const stringSet = {
 
     // CAST
     CSAT_START_NEW_CONVERSATION: '💬 Start a new conversation',
-    CSAT_CLOSE_NOTIFIER_TITLE: '🙋 Is there anything else I can assist you with?',
-    CSAT_CLOSE_NOTIFIER_SUBTITLE: 'If not, this conversation will automatically close in 10 seconds',
-    CSAT_CLOSE_NOTIFIER_YES: 'Yes',
-    CSAT_CLOSE_NOTIFIER_NO: 'No',
+    CSAT_CLOSE_NOTIFIER_TITLE: '🙋 Can I assist you with anything else?',
+    CSAT_CLOSE_NOTIFIER_SUBTITLE: 'Chat will close in 10 seconds',
+    CSAT_CLOSE_NOTIFIER_YES: '💬 Continue',
+    CSAT_CLOSE_NOTIFIER_NO: '🎯 End chat',
     CSAT_RATING_COMMENT: 'Could you share why you gave this score?',
     CSAT_RATING_PLACEHOLDER: 'Leave a comment',
     CSAT_RATING_BTN_RESELECT: 'Reselect',
